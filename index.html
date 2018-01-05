@@ -9,17 +9,16 @@
 	<body>
 		<header>
 			<div>
-				<!--<a href="index.html"><img src="img/black_img.png" class="header_logo_img"></a>-->
-				<span class="logo">ys</span>
+				<a href="index.html"><img src="img/logo.png" class="header_logo_img"><a/>
 				<ul>
-					<a href="register.html"><li>홈</li></a>
-					<a href="index.html"><li>로그인</li></a>
-					<a href="index.html"><li>회원가입</li></a>
+					<li><a href="register.html">회원가입</a></li>
+					<li><a href="index.html">로그인</a></li>
+					<li><a href="index.html">홈</a></li>
 				</ul><br>
 			</div>
 		</header>
 		<main class="main_login">
-			<form action="/login" method="post">
+			<form action="php/login.php" method="post">
 					<h2>Log-In</h2>
 					<input type="text" placeholder="ID" name="id" class="id_input" required="required">
 					<input type="password" placeholder="비밀번호" name="pw" class="pw_input" required="required">
@@ -29,7 +28,7 @@
 			</form>
 		</main>
 		<div id="footer">
-        <br/> Copyright ©  Corp. All rights reserved.<font color="yellow">김윤엽</font><font color="blue" class="ys">김영서</font>
+        <br/> Copyright ©  Corp. All rights reserved.<font color="blue">김윤엽</font>
         </div>
 	</body>
 </html>
