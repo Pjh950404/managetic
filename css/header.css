@@ -5,7 +5,6 @@ body {
 	font-size: 18px;
 	width: 100%;
 	height: 100%;
-	background: gainsboro;
 }
 main
 {
@@ -28,9 +27,9 @@ header div
 	margin: 0 10%;
 }
 .header_logo_img{
-	width: 30px;
-	height: 30px;
-	margin-top: 10px;
+	width: 50px;
+	height: 50px;
+	margin-top: 7px;
 	text-decoration: none;
 }
 header ul{
@@ -40,7 +39,9 @@ header ul{
 }
 header ul a
 {
+	text-decoration: none;
 	float: left;
+	color: white;
 }
 header ul li{
 	list-style: none;
@@ -50,7 +51,7 @@ header ul li{
 	margin-bottom: 10px;
 	color: white;
 }
-header ul li:hover{
+header ul a:hover{
 	color: #76787c;
 	-webkit-transition: 0.2s;
 	transition: 0.2s;
@@ -66,7 +67,8 @@ hr{
     clear: both;
 	background-color: gainsboro;
 	text-align: center;
-	bottom: -10;
+	position: absolute;
+	bottom: 0;
 	left: 0;
 	right: 0;
 }
