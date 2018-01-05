@@ -22,8 +22,8 @@ $person_2 = $_POST['person_number2'];
 //table row 생성
 $sql = "insert into `user` (`name`, `id`, `pw`, `eamil`, `phoneNumber`, `adrassNumber`)";
 $sql = $sql. "values ('$name', '$id', '$pw', '$email_1@$email_2', '$phone_1-$phone_2-$phone_3', '$person_1-$person_2);";
-if($mysli->query($sql)){
-	echo("<script language = javascript>location.href='../mypage.html';</script>");	
+if($mysqli->query($sql)){
+	echo("<script language = javascript>location.href='../index.html';</script>");	
 }else{
 	echo "로그인 실패";
 	mysql_error($sql);
