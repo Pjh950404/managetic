@@ -10,19 +10,19 @@
 	<body>
 		<header>
 			<div>
-				<a href="index.html"><img src="img/black_img.png" class="header_logo_img"></a>
+				<a href="index.html"><img src="img/logo.png" class="header_logo_img"><a/>
 				<ul>
-					<a href="register.html"><li>홈</li></a>
-					<a href="index.html"><li>로그인</li></a>
-					<a href="index.html"><li>회원가입</li></a>
+					<li><a href="register.html">회원가입</a></li>
+					<li><a href="index.html">로그인</a></li>
+					<li><a href="index.html">홈</a></li>
 				</ul><br>
 			</div>
 		</header>
 		<main id="main_login">
-			<form action="/register" method="post" name="register" id="register_clear_form">
+			<form action="php/app.php" method="post" name="register" id="register_clear_form">
 				<div>
 					이름<br><input type="text" placeholder="name" name="name" id="name_input"><br>
-					아이디<br><input type="text" placeholder="id" name="username" id="id_input"><br>
+					아이디<br><input type="text" placeholder="id" name="id" id="id_input"><br>
 					비밀번호<br><input type="password" placeholder="pw" name="password" id="pw_input" onkeyup="password_same()";><br>
 					비밀번호 확인<br><input type="password" id="pwcheck_input" name='pw_check' onkeyup="password_same();"><span id="pw_same"></span><br>
 					이메일<br><input type="text" name="email_1" id="email_input1">@<input type="text" name="email_2" id="email_input2" placeholder="직접입력"><br>
@@ -34,7 +34,7 @@
 			</form>
 		</main>
 		<div id="footer">
-        <br/> Copyright ©  Corp. All rights reserved.<font color="red">김윤엽</font><font color="blue" id="ys">김영서</font>
+        <br/> Copyright ©  Corp. All rights reserved.<font color="blue">김윤엽</font>
         </div>
 	</body>
 
