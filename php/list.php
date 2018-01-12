@@ -4,26 +4,28 @@
 		<style>
 			table{border: 1px solid gray;}
 			td,th{border:1px solid gray; padding: 4px;}
+			h2{margin-left: 230px;}
 		</style>
 	</head>
 	<body>
+		<h2>회원정보</h2>
 		<?php
-                        //DB connect
-			$host = '127.0.0.1';
-			$user = 'root';
-			$dbpw = '!As092212';
-			$dbName = 'managetic';
+			$host = 'localhost';
+			$user = 'yunyeop';
+			$dbpw = 'As092212';
+			$dbName = 'yunyeop';
 			$mysqli = new mysqli($host, $user, $dbpw, $dbName);
-			
+
 			$result = mysqli_query($mysqli, "SELECT * FROM user");
+
 			echo "<table><tr><th>이름</th><th>아이디</th><th>비밀번호</th><th>이메일</th><th>전화번호</th>";
 			while($rows = mysqli_fetch_array($result)){
 				echo "<tr>";
-				echo "<td>".$rows['name']."</td>";
-				echo "<td>".$rows['id']."</td>";
-				echo "<td>".$rows['pw']."</td>";
-				echo "<td>".$rows['email']."</td>";
-				echo "<td>".$rows['phoneNumber']."</td>";
+				echo "<td>".iconv('EUCKR', 'UTF8', $rows['name'])."</td>";
+				echo "<td>".iconv('EUCKR', 'UTF8', $rows['id'])."</td>";
+				echo "<td>".iconv('EUCKR', 'UTF8', $rows['pw'])."</td>";
+				echo "<td>".iconv('EUCKR', 'UTF8', $rows['email'])."</td>";
+				echo "<td>".iconv('EUCKR', 'UTF8', $rows['phoneNumber'])."</td>";
 				echo "</tr>";
 			}
 			echo "</table>";
