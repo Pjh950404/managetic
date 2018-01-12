@@ -26,7 +26,7 @@
     $person_1 = $_POST['person_number1'];
     $person_2 = $_POST['person_number2'];
 
-    //table row �앹꽦
+    //table row 생성
     mysqli_query($mysqli, "set session character_set_connection=utf8;");
     mysqli_query($mysqli, "set session character_set_results=utf8;");
     mysqli_query($mysqli, "set session character_set_client=utf8;");
