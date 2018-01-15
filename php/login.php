@@ -6,7 +6,11 @@
 <?php
 	session_start();
 	
-	include("dbcon.php");	
+	include("dbcon.php");
+	
+	if(isset($_SESSION['user_name'])){
+		echo("<script>location.href='../mypage.php';</script>");
+	}	
 	
 	$id = $_POST['id'];
 	$pw = $_POST['pw'];
@@ -17,12 +21,12 @@
 	
 	if($row != null){
 		$_SESSION['user_name'] = $row['name'];
-		echo ("<script>alert('".$row['name']."님 어서오세요.');</script>");
-		echo("<script>location.href='../mypage.html';</script>");
+		echo ("<script>alert('".$_SESSION['user_name']."님 어서오세요.');</script>");
+		echo("<script>location.href='../mypage.php';</script>");
 	}
 	if($row == null){
 		echo "<script>alert('아이디 혹은 비밀번호가 옳바르지 않습니다.');</script>";	
-		echo("<script>location.href='../index.html';</script>");
+		echo("<script>location.href='../login.html';</script>");
 	}
 	?>
 </body>
