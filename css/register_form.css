@@ -10,7 +10,7 @@ form div
 {	
 	width: 500px;
 	display: inline-block;
-	
+	margin-left: 200px;
 	text-align: left;
 }
 #login_background{

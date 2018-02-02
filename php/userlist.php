@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<title>유저정보</title>
 		<style>
 			table{border: 1px solid gray;}
 			td,th{border:1px solid gray; padding: 4px;}
@@ -10,11 +11,8 @@
 	<body>
 		<h2>회원정보</h2>
 		<?php
-			$host = 'localhost';
-			$user = 'yunyeop';
-			$dbpw = 'As092212';
-			$dbName = 'yunyeop';
-			$mysqli = new mysqli($host, $user, $dbpw, $dbName);
+			
+			include("dbcon.php");			
 
 			$result = mysqli_query($mysqli, "SELECT * FROM user");
 

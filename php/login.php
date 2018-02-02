@@ -21,7 +21,14 @@
 	
 	if($row != null){
 		$_SESSION['user_name'] = $row['name'];
-		echo ("<script>alert('".$_SESSION['user_name']."님 어서오세요.');</script>");
+		$_SESSION['user_id'] = $row['id'];
+		$_SESSION['user_pw'] = $row['pw'];
+		$_SESSION['user_email1'] = $row['email1'];
+		$_SESSION['user_email2'] = $row['email2'];	
+		$_SESSION['user_phone'] = $row['phoneNumber'];
+		$_SESSION['user_person'] = $row['personNumber'];
+		
+		echo("<script>alert('".iconv('EUCKR', 'UTF8', $_SESSION['user_name'])."님 어서오세요.');</script>");
 		echo("<script>location.href='../mypage.php';</script>");
 	}
 	if($row == null){
